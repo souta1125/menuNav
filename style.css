@@ -1,0 +1,126 @@
+html{
+  font-size: 10px;
+  /* コピー禁止！！ */
+  user-select: none;
+  -webkit-user-select: none;
+  /* ズーム禁止 */
+  touch-action: pan-x pan-y;
+  -webkit-touch-action: pan-x pan-y;
+}
+
+body{
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.page-content{
+  background-color: #F7F5F5;
+  box-shadow: 0 0 2px #333;
+  color: var(--txt);
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 0;
+}
+
+nav{
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  height: 100dvh;
+  width: 320px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  .nav-inner{
+    height: 100%;
+    padding: 32px;
+
+    .mainMenu{
+      overflow: hidden;
+      .mainMenu-inner{
+        display: grid;
+        grid-template-columns: repeat(3, calc(320px - 64px));
+        transition: transform .5s;
+
+        > *{
+          scroll-snap-align: center;
+        }
+        .childMenu{
+          display: none;
+
+          &[aria-disabled="false"]{
+            display: block;
+          }
+        }
+      }
+
+      .mainMenu-item{
+        a{
+          border-bottom: 1px solid var(--primary);
+          color: var(--primary);
+          cursor: pointer;
+          display: block;
+          font-size: 1.6rem;
+          padding: 16px;
+          position: relative;
+          transition: opacity .3s;
+
+          &:hover{
+            opacity: 0.7;
+          }
+          &.has-childMenu{
+            &::before{
+              background-image: url('./img/icon/arrow.svg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              content: '';
+              display: block;
+              height: 20px;
+              width: 20px;
+              position: absolute;
+              top: calc(50% - 10px);
+              right: 0;
+            }
+          }
+          &.backBtn{
+            padding-left: 30px;
+            
+            &::before{
+              background-image: url('./img/icon/arrow.svg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              content: '';
+              display: block;
+              height: 20px;
+              width: 20px;
+              position: absolute;
+              top: calc(50% - 10px);
+              left: 0;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0 320px 0 auto;
+  max-width: var(--mw);
+  min-height: 100dvh;
+}

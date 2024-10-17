@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-content">
+      <nav>
+        <div class="nav-inner">
+          <div class="mainMenu" id="js-mainMenu">
+            <div class="mainMenu-inner">
+              <ul class="parentMenu">
+                <li class="mainMenu-item">
+                  <a href="">遊びたい</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a class="has-childMenu" data-field="entertainment">観たい</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a class="has-childMenu" data-field="food">食べたい</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">ほしい</a>
+                </li>
+              </ul>
+              <ul class="childMenu" aria-disabled="true" data-field="entertainment">
+                <li class="mainMenu-item">
+                  <a class="backBtn">戻る</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">パレード</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">期間限定</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">ステージショー</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">花火</a>
+                </li>
+              </ul>
+              <ul class="childMenu" aria-disabled="true" data-field="food">
+                <li class="mainMenu-item">
+                  <a class="backBtn">戻る</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">期間限定</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">キャラクターモチーフ</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">ワンハンドスナック</a>
+                </li>
+                <li class="mainMenu-item">
+                  <a href="">ショーを見ながら</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main>
+        
+      </main>
+    </div>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
